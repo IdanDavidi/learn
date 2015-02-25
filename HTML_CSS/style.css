@@ -49,6 +49,12 @@ table {
 /* ******************** */
 /* My style starts here */
 /* ******************** */
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 body {
     margin:     0;
     font-size:  14px;
@@ -57,6 +63,13 @@ body {
 
 strong {
     font-weight: bold;
+}
+
+.container {
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 960px;
 }
 
 p{
@@ -101,11 +114,12 @@ code {
     color: #666;
     font: 14px/24px "Source Code Pro", Inconsolata, "Lucia Console", Terminal, "Courier New", Courier;
     display: inline-block;
-    height: 70px;
+    height: 90px;
+    width: 90px;
     margin: 14px 14px;
     padding-top: 20px;
+    padding-bottom: 20px;
     text-align: center;
-    width: 90px;
 }
 
 .border-solid {
@@ -117,15 +131,14 @@ code {
 
 .border-double {
     border: 6px double #9799a7;
-    border-radius: 40px 0px;
+    border-radius: 30px 0;
 }
 
 .border-dashed {
     border: 4px dashed #9799a7;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
 }
 
 .border-dotted {
     border: 4px dotted #9799a7;
+    border-radius: 20%;
 }
