@@ -56,20 +56,44 @@ table {
 }
 
 body {
-    margin:     0;
+    margin: 0 auto;
+    width: 55%;
     font-size:  14px;
 }
-
 
 strong {
     font-weight: bold;
 }
 
 .container {
-    margin: 0 auto;
+    margin: 0;
     padding-left: 30px;
     padding-right: 30px;
-    width: 960px;
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 10px 5px;
+    margin-top: 0;
+}
+
+
+h1 {
+    font-family:   "Tahoma";
+    color:		   darkgreen;
+    font-size: 	   1.7em;
+}
+
+h2 {
+    font-family:   "Arial";
+    color:		   dimgray;
+    font-size: 	   1.4em;
+}
+
+h3 {
+    font-family: "Arial";
+    color: dimgray;
+    font-size: 1.2em;
 }
 
 p{
@@ -85,16 +109,15 @@ p:last-of-type {
     margin-bottom: 0;
 }
 
-h1 {
-    margin:    	   10px 5px;
-/*  margin:		   10px 5px 10px 5px;*/
-/*	margin-top:    10px;
-    margin-bottom: 10px;
-    margin-left:   5px;
-    margin-right:  5px;*/
-    font-family:   Tahoma;
-    color:		   darkgreen;
-    font-size: 	   1.5em;
+.btn {
+    border-radius: 5px;
+    display: inline-block;
+    margin: 0;
+}
+
+.btn-alt {
+    border: 1px solid grey;
+    padding: 10px 20px;
 }
 
 .class_1 {
