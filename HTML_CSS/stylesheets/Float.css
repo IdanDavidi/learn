@@ -49,7 +49,6 @@ table {
 /* ******************** */
 /* My style starts here */
 /* ******************** */
-
 body, html{
     font-family: cursive;
     height: 100%;
@@ -58,6 +57,9 @@ body, html{
 header, section, aside, footer {
     text-align: center;
     position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 header.main {
@@ -76,7 +78,7 @@ section.main {
 section.row4 {
     background: darkcyan;
     width: 25%;
-    height: 30%;
+    height: 20%;
     float: left;
 }
 
@@ -87,27 +89,35 @@ aside.main {
     float: right;
 }
 
+div.group {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
 .group:before,
 .group:after {
     content: "";
     display: table;
 }
+
 .group:after {
     clear: both;
 }
+
 .group {
     background: #eaeaed;
     border-radius: 6px;
     clear: both;
     *zoom: 1;
-    display: inline-block;
 }
 
 section.row2 {
     background: chocolate;
     width: 50%;
-    height: 30%;
+    height: 100%;
     float: left;
+    padding: 20px;
 }
 
 footer.main {
@@ -121,7 +131,6 @@ code {
     color: white;
     text-align: center;
     display: inline-block;
-
     position: absolute;
     top: 50%;
     bottom: 50%;

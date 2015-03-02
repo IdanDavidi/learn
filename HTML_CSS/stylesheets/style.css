@@ -61,6 +61,29 @@ body {
     font-size:  14px;
 }
 
+section {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/*
+  ========================================
+  Clearfix
+  ========================================
+*/
+.group:before,
+.group:after {
+    content: "";
+    display: table;
+}
+.group:after {
+    clear: both;
+}
+.group {
+    clear: both;
+    *zoom: 1;
+}
+
 strong {
     font-weight: bold;
 }
@@ -70,11 +93,38 @@ strong {
     padding-left: 30px;
     padding-right: 30px;
     width: 100%;
+    position: relative;
+}
+
+section.left {
+    position: absolute;
+    float: left;
+    width: 40%;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+section.right {
+    float: right;
+    width: 60%;
+    padding: 0;
+    margin: 0;
+    height: auto;
+}
+
+nav.center {
+
 }
 
 h1, h2, h3, h4, h5, h6, p {
-    margin: 10px 5px;
-    margin-top: 0;
+    padding: 10px 5px;
+    padding-top: 0;
+}
+
+h1, h2 {
+    font-weight: bold;
 }
 
 
@@ -82,18 +132,36 @@ h1 {
     font-family:   "Tahoma";
     color:		   darkgreen;
     font-size: 	   1.7em;
+    padding-top: 10px;
 }
 
 h2 {
     font-family:   "Arial";
     color:		   dimgray;
     font-size: 	   1.4em;
+    padding: 15px;
 }
 
 h3 {
     font-family: "Arial";
     color: dimgray;
     font-size: 1.2em;
+    font-style: italic;
+}
+
+h3.date {
+    font-weight: 200;
+}
+
+a {
+    color: #0087cc;
+}
+a:hover {
+    color: #ff7b29;
+}
+a.vertical-nav {
+    display: block;
+    padding: 2px 0;
 }
 
 p{
@@ -164,4 +232,82 @@ code {
 .border-dotted {
     border: 4px dotted #9799a7;
     border-radius: 20%;
+}
+
+footer.primary-footer{
+    padding: 5% 0;
+}
+footer small {
+    float: left;
+}
+
+footer nav {
+    float: right;
+}
+
+.box-1-4 {
+    width: 25%;
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+}
+
+section.offset {
+    border: 2px dashed #9799a7;
+    background: none;
+    width: 100px;
+    height: 100px;
+    margin: 30px 20px;
+    padding: 0;
+}
+
+section.offset code.relative {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    left: 15px;
+    top: 15px;
+    background: #2db34a;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+section.relative {
+    width: 560px;
+    height: 100px;
+    margin: 30px 0;
+    border-radius: 6px;
+    background: #eaeaed;
+    position: relative;
+}
+
+code.normal {
+    padding: 10px 10px;
+    color: #000000;
+    margin: 0;
+    display: inline-block;
+    height: auto;
+    width: auto;
+    background: none;
+}
+
+div.absolute, code.absolute {
+    position: absolute;
+    height: 70px;
+    width: 250px;
+}
+div.absolute {
+    border: 2px dashed dimgray;
+    background: none;
+    right: 0;
+    top: 0;
+}
+code.absolute {
+    background: #2db34a;
+    color: white;
+    right: 10px;
+    top: 10px;
+    margin: 0;
+
 }
