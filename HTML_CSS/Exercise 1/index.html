@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Login Page</title>
+</head>
+<body>
+    <!-- Menu Bar -->
+    <header id="MenuBar" class="top-static menubar">
+        <!-- Logo -->
+        <section class="logo right">
+            <img src="images/Batman.png" class="logo-size grayscale">
+        </section>
+
+        <!-- Navigation -->
+        <nav class="menubar right">
+            <a href="index.html" class="selected">דף הבית
+            </a><a href="about.html">אודות
+            </a><a href="superman.html"> גבר על
+            </a><a href="drywall.html"> גבס
+            </a><a href="screen.html"> גויאבה
+            </a>
+        </nav>
+
+        <!-- Help -->
+        <nav class="secondary-menu left">
+            <a>?</a>
+        </nav>
+    </header>
+
+    <!-- Middle of page -->
+    <section class="main">
+        <!-- Login Section -->
+        <section class="login">
+            <section class="login-top">
+                <a class="exit-button left">x</a>
+                <h2>התחברות</h2>
+            </section>
+
+            <form class="login-form">
+                <label for="username">שם משתמש:</label>
+                <input type="text" class="field" name="username" id="username" placeholder="TheBatman">
+                <br>
+
+                <label for="password">סיסמא:</label>
+                <input type="password" class="field" name="password" id="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
+                <br>
+
+                <p class="info expand">
+                    <strong>שימו לב!</strong> העישון אסור בכל מתחמי התחנה והרציפים, למעט במקומות המיועדים לכך. <br>
+                    הרכבת של השעה - <em>שש, ועשרים ושלוש דקות</em>, נכנסת לרציף, <em>2</em>. נא להתרחק משפת הרציף אל מעבר לפס הצהוב. <br>
+                    לידעתיכם, הקרון הצפוני ברכבת, מיועד לבעלי כרטיס מקום שמור בלבד.
+                </p>
+
+                <input type="submit" class="login-button" id="login-button" value="התחבר">
+            </form>
+        </section>
+    </section>
+</body>
+</html>

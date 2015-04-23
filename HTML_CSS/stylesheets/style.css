@@ -55,10 +55,14 @@ table {
     box-sizing: border-box;
 }
 
+body, html{
+    height: 100%;
+}
+
 body {
-    margin: 0 auto;
-    width: 55%;
-    font-size:  14px;
+    background: #293f50;
+    color: #888;
+    font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 section {
@@ -96,26 +100,36 @@ strong {
     position: relative;
 }
 
+header.vert-align > * {
+    vertical-align: middle;
+}
+.primary-header a,
+.primary-footer a {
+    color: #fff;
+}
+.primary-header a:hover,
+.primary-footer a:hover {
+    color: #648880;
+}
+
 section.left {
-    position: absolute;
-    float: left;
-    width: 40%;
+    display: inline-block;
+    width: 50%;
+    height: auto;
     padding: 0;
     margin: 0;
-    height: auto;
-    top: 50%;
-    transform: translate(0,-50%);
+
+    /* Border */
+    border-bottom: 3px solid #648880;
+    border-bottom-right-radius: 15px;
 }
 section.right {
-    float: right;
-    width: 60%;
+    display: inline-block;
+    text-align: center;
+    width: 50%;
+    height: auto;
     padding: 0;
     margin: 0;
-    height: auto;
-}
-
-nav.center {
-
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -127,23 +141,20 @@ h1, h2 {
     font-weight: bold;
 }
 
-
 h1 {
-    font-family:   "Tahoma";
-    color:		   darkgreen;
-    font-size: 	   1.7em;
+    color: darkgreen;
+    font-size: 2em;
     padding-top: 10px;
+    line-height: 44px;
 }
 
 h2 {
-    font-family:   "Arial";
-    color:		   dimgray;
+    color:		   #648880;
     font-size: 	   1.4em;
     padding: 15px;
 }
 
 h3 {
-    font-family: "Arial";
     color: dimgray;
     font-size: 1.2em;
     font-style: italic;
@@ -153,26 +164,41 @@ h3.date {
     font-weight: 200;
 }
 
+nav.upper-nav {
+    display: inline-block;
+    width: auto;
+    text-align: left;
+}
+
 a {
     color: #0087cc;
+    text-decoration: none;
 }
 a:hover {
     color: #ff7b29;
+    font-weight: bold;
 }
 a.vertical-nav {
-    display: block;
+    display: inline-block;
     padding: 2px 0;
 }
+a.horizontal-nav {
+    display: inline-block;
+    text-align: center;
+    padding-left: 3px;
+    padding-right: 4px;
+}
+a.vertical-nav, a.horizontal-nav {
+    width: 60px;
+}
 
-p{
+p {
     display: block;
     margin:  10px 15px;
 }
-
 p:first-of-type {
     margin-top:    0;
 }
-
 p:last-of-type {
     margin-bottom: 0;
 }
@@ -280,6 +306,10 @@ section.relative {
     border-radius: 6px;
     background: #eaeaed;
     position: relative;
+}
+section.about {
+    background: #fff;
+
 }
 
 code.normal {
