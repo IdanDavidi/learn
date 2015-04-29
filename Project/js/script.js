@@ -3,5 +3,5 @@
  */
 function disappearObject(id) {
     var object = document.getElementById(id);
-
+    object.style.display = 'none';
 }
