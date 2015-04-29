@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="script" type="text/javascript" href="js/script.js" />
+    <script type="text/javascript" src="js/script.js">
+        window.onload = onLoad;
+    </script>
+
     <title>Login Page</title>
 </head>
-<body>
+<body onload="onLoad();">
     <!-- Menu Bar -->
     <header id="MenuBar" class="top-static menubar">
         <!-- Logo -->
@@ -18,9 +21,9 @@
         <nav class="menubar right">
             <a href="index.html" class="selected">דף הבית
             </a><a href="#">אודות
-            </a><a href="#"> גבר על
-            </a><a href="#"> גבס
-            </a><a href="#"> גויאבה
+            </a><a href="#">גבר על
+            </a><a href="#">גבס
+            </a><a href="#">גויאבה
             </a>
         </nav>
 
@@ -35,18 +38,30 @@
         <!-- Login Section -->
         <section class="login" id="loginSection">
             <section class="login-top">
-                <a class="exit-button left" onclick="disappearObject('loginSection'); return false;">x</a>
+                <a class="exit-button left" id="btnLoginClose">x</a>
                 <h2>התחברות</h2>
             </section>
 
             <form class="login-form">
-                <label for="username">שם משתמש:</label>
-                <input type="text" class="field" name="username" id="username" placeholder="TheBatman">
-                <br>
+                <section class="field">
+                    <section class="subfield">
+                        <label for="username">שם משתמש:</label>
+                    </section>
+                    <section class="subfield">
+                        <input type="text" class="field" name="username" id="username" placeholder="TheBatman">
+                        <div class="error" id="username-error"></div>
+                    </section>
+                </section>
 
-                <label for="password">סיסמא:</label>
-                <input type="password" class="field" name="password" id="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
-                <br>
+                <section class="field">
+                    <section class="subfield">
+                        <label for="password">סיסמא:</label>
+                    </section>
+                    <section class="subfield">
+                        <input type="password" class="field" name="password" id="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
+                        <div class="error" id="password-error"></div>
+                    </section>
+                </section>
 
                 <p class="info expand">
                     <strong>שימו לב!</strong> העישון אסור בכל מתחמי התחנה והרציפים, למעט במקומות המיועדים לכך. <br>
@@ -54,7 +69,7 @@
                     לידעתיכם, הקרון הצפוני ברכבת, מיועד לבעלי כרטיס מקום שמור בלבד.
                 </p>
 
-                <input type="submit" class="login-button" id="login-button" value="התחבר">
+                <input type="button" class="login-button" id="login-button" value="התחבר">
             </form>
         </section>
     </section>

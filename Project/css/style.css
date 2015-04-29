@@ -94,6 +94,7 @@ header.menubar {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1;
 }
 .logo {
     text-align: center;
@@ -180,6 +181,7 @@ section.login {
     border-radius: 6px;
     width: 450px;
     background-color: #BBBBBB;
+    direction: rtl;
 }
 section.login-top {
     position: relative;
@@ -212,6 +214,13 @@ form.login-form {
     text-align: center;
     padding-top: 10px;
 }
+section.field {
+    display: block;
+}
+section.field section.subfield {
+    display: inline-block;
+    vertical-align: top;
+}
 label {
     direction: rtl;
     text-align: left;
@@ -222,11 +231,26 @@ input.field {
     display: inline-block;
     width: 250px;
 }
+div.error {
+    direction: rtl;
+    text-align: right;
+    padding: 0 4px 4px 4px;
+    display: none;
+    font: 400 10px sans-serif;
+    overflow: hidden;
+    width: 250px;
+    text-overflow: ellipsis;
+    color: red;
+}
+/*div.error:last-of-type {*/
+    /*padding-bottom: 0;*/
+    /*margin-bottom: 0;*/
+/*}*/
 p.info {
     direction: rtl;
     text-align: right;
     font: 400 12px Arial, sans-serif;
-    margin-top: 30px;
+    margin-top: 15px;
     margin-bottom: 60px;
     width: 380px;
     display: inline-block;
@@ -247,7 +271,6 @@ p.info {
 }
 .expand:after{
     content: "קרא עוד..";
-    /*font-style: italic;*/
     text-align: right;
     position: absolute;
     bottom: 0;
