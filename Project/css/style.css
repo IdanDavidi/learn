@@ -1,0 +1,287 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
+  License: none (public domain)
+*/
+/* CSS REST */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* Style Begins Here */
+/* set all elements as border-box model */
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Sets the size of the main elements in order to set the subelements height */
+body, html{
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* GENERAL */
+section, header, footer, nav {
+    display: inline-block;
+}
+.right {
+    float: right;
+}
+.left {
+    float: left;
+}
+strong {
+    font-weight: 700;
+}
+em {
+    font-style: italic;
+}
+/* END OF GENERAL */
+
+/* MENU BAR */
+header.menubar {
+    width: 100%;
+    direction: rtl;
+    background-color: black;
+    height: 38px;
+}
+.top-static {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.logo {
+    text-align: center;
+    width: 120px;
+    height: 100%;
+}
+img.logo-size {
+    width: 78px;
+    height: 47px;
+}
+img.grayscale {
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%); /* Chrome 19+ & Safari 6+ */
+
+    /* Animation - for mouse-in and mouse-out */
+    -webkit-transition: filer 1s, -webkit-filter 1s;
+    transition: filer 1s, -webkit-filter 1s;
+}
+img.grayscale:hover {
+    filter: none;
+    -webkit-filter: grayscale(100%);
+}
+
+nav.menubar {
+    height: 100%;
+}
+nav.menubar a {
+    direction: rtl;
+    margin: 0 1px;
+    padding: 0 4px;
+    height: 100%;
+    background: yellow;
+    color: black;
+    font: 300 20px/38px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-decoration: none;
+}
+nav.menubar a.selected {
+    background: #E0E0E0;
+}
+nav.menubar a:hover {
+    background: #E0E0E0;
+}
+nav.menubar a:first-of-type {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    padding-right: 5px;
+}
+nav.menubar a:last-of-type {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    padding-left: 5px;
+}
+nav.secondary-menu a {
+    direction: rtl;
+    height: 100%;
+    background: yellow;
+    color: black;
+    font: 300 12px/38px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    padding: 2px 7px;
+    border-radius: 4px;
+    margin-left: 10px;
+
+    -webkit-transition: padding 0.2s;
+    transition: padding 0.2s;
+}
+nav.secondary-menu a:hover {
+    padding: 4px 9px;
+}
+/* END OF MENU BAR */
+
+/* START OF MIDDLE OF PAGE */
+section.main {
+    background: #E0E0E0;
+    width: 100%;
+    height: 110%;
+    padding-top: 38px;
+    text-align: center;
+}
+
+section.login {
+    margin-top: 70px;
+    border: solid #777777 3px;
+    border-radius: 6px;
+    width: 450px;
+    background-color: #BBBBBB;
+}
+section.login-top {
+    position: relative;
+}
+section.login section.login-top{
+    width: 100%;
+}
+a.exit-button {
+    padding: 3px;
+    background-color: #777777;
+    color: #BBBBBB;
+    font: 300 18px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+a.exit-button:hover {
+    font-weight: 700;
+    cursor: pointer;
+}
+section.login h2 {
+    margin: 10px auto;
+    font: 700 24px Tahoma, Arial, sans-serif;
+    width: auto;
+}
+form.login-form {
+    position: relative;
+    direction: rtl;
+    text-align: center;
+    padding-top: 10px;
+}
+label {
+    direction: rtl;
+    text-align: left;
+    display: inline-block;
+    width: 90px;
+}
+input.field {
+    display: inline-block;
+    width: 250px;
+}
+p.info {
+    direction: rtl;
+    text-align: right;
+    font: 400 12px Arial, sans-serif;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    width: 380px;
+    display: inline-block;
+    padding: 4px;
+    border: solid #777777 2px;
+    background: #E0E0E0;
+
+    /* handling text overflow */
+    overflow: hidden;
+    position: relative;
+
+    /* content-box in order to set the number of shown lines */
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    line-height: 16px;
+    height: 30px;
+}
+.expand:after{
+    content: "קרא עוד..";
+    /*font-style: italic;*/
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    left: 4px;
+    font-size: 10px;
+    line-height: 20px;
+    height: 15px;
+}
+.expand:hover:after {
+    content: "";
+}
+p.info:hover {
+    height: auto;
+}
+input.login-button {
+    /* Pin the button to the bottom of the form */
+    position: absolute;
+    bottom: -4px;
+    right: -3px;
+    /* */
+
+    width: 450px;
+    height: 40px;
+    font: 400 16px Tahoma, Arial, sans-serif;
+    border: solid #777777 3px;
+    background: yellow;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-top-width: 2px;
+}
+input.login-button:hover {
+    background: #E0E0E0;
+}
+input.login-button:active {
+    background: linear-gradient(#CCCCCC 5%, #E0E0E0);
+}
+/* END OF MIDDLE OF PAGE */
