@@ -307,4 +307,8 @@ input.login-button:hover {
 input.login-button:active {
     background: linear-gradient(#CCCCCC 5%, #E0E0E0);
 }
+input.login-button:focus {
+    /* Removes the outline border of clicked (focus) button*/
+    outline-style: none !important;
+}
 /* END OF MIDDLE OF PAGE */

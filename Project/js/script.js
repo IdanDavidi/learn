@@ -7,66 +7,65 @@ function onLoad() {
     var object;
 
     // OnClick event listener to hide the login section
-    object = document.getElementById('btnLoginClose');
-    object.addEventListener('click', function () {
-        hideElement('loginSection');
+    $('#btnLoginClose').click(function() {
+        $('#loginSection').fadeOut(200);
     });
 
     // OnClick event to login button
-    object = document.getElementById('login-button');
-    object.addEventListener('click', function() {
-        sendForm()
-    });
-}
-
-function hideElement(id) {
-    document.getElementById(id).style.display = 'none';
+    $('#login-button').click(sendForm);
 }
 
 function sendForm() {
-    var boolContinue = false;
+    var boolContinue = true;
 
     // UserName check
     var userNameReg = /[^\da-z!\-]/;
-    var userName = document.getElementById('username');
-    var username_error = document.getElementById('username-error');
-    if (userName.value.length === 0) {
-        username_error.style.display = 'block';
-        username_error.innerHTML = 'יש להזין שם משתמש';
+    var userName = $('#username');
+    var username_error = $('#username-error');
+    if (userName.val().length === 0) {
+        username_error.html('יש להזין שם משתמש');
+        username_error.show(250);
+        boolContinue = false;
     }
     else if (userNameReg.test(userName.value)) {
-        username_error.style.display = 'block';
-        username_error.innerHTML = 'שם משתמש מכיל תווים אסורים';
+        username_error.html('שם משתמש מכיל תווים אסורים');
+        username_error.show(250);
+        boolContinue = false;
     }
     else {
-        username_error.style.display = 'none';
-        boolContinue = true;
+        username_error.hide(100);
     }
 
     // Password Check
-    var password = document.getElementById('password');
-    var password_error = document.getElementById('password-error');
+    var password = $('#password');
+    var password_error = $('#password-error');
 
-    if (password.value.length === 0) {
-        password_error.style.display = 'block';
-        password_error.innerHTML = 'יש להזין סיסמא';
+    if (password.val().length === 0) {
+        password_error.html('יש להזין סיסמא');
+        password_error.show(250);
+        boolContinue = false;
     }
-    else if (password.value.length > 8) {
-        password_error.style.display = 'block';
-        password_error.innerHTML = 'סיסמא אסורה: עליך להזין עד 8 תווים';
+    else if (password.val().length > 8) {
+        password_error.html('סיסמא אסורה: עליך להזין עד 8 תווים');
+        password_error.show(250);
+        boolContinue = false;
     }
-    else if (password.value.indexOf(' ') > -1) {
-        password.style.display = 'block';
-        password_error.innerHTML = 'סיסמא אסורה: עליך להזין תווים ללא רווחים';
+    else if (password.val().indexOf(' ') > -1) {
+        password_error.html('סיסמא אסורה: עליך להזין תווים ללא רווחים');
+        password_error.show(250);
+        boolContinue = false;
     }
     else {
-        password_error.style.display = 'none';
-        boolContinue = boolContinue && true;
+        password_error.hide(100);
     }
 
     // If connection was successful
     if (boolContinue) {
-        var loginSection = document.getElementById('loginSection');
-        loginSection.innerHTML = 'התחברת בהצלחה!'
+        var $loginSection = $('#loginSection');
+        $loginSection.hide(500, function() {
+            $loginSection.delay(300);
+            $loginSection.show(1200);
+            $loginSection.html('התחברת בהצלחה!');
+        }).html('');
     }
 }
