@@ -20,7 +20,7 @@ function onLoad() {
 }
 
 function hideElement(id) {
-    document.getElementById(id).style.display = 'none';
+    $("#" + id).fadeOut(200);
 }
 
 function sendForm() {
