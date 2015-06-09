@@ -2,78 +2,110 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-rtl.css">
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/jquery-1.11.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
-    <script>
-
-    </script>
 
     <title>Login Page</title>
 </head>
 <body onload="onLoad();">
     <!-- Menu Bar -->
-    <header id="MenuBar" class="top-static menubar">
-        <!-- Logo -->
-        <section class="logo right">
-            <img src="images/Batman.png" class="logo-size grayscale">
-        </section>
+    <!--<header id="MenuBar" class="top-static menubar">-->
+        <!--&lt;!&ndash; Logo &ndash;&gt;-->
+        <!--<section class="logo right">-->
+            <!--<img src="images/Batman.png" class="logo-size grayscale">-->
+        <!--</section>-->
 
-        <!-- Navigation -->
-        <nav class="menubar right">
-            <a href="index.html" class="selected">דף הבית
-            </a><a href="#">אודות
-            </a><a href="#">גבר על
-            </a><a href="#">גבס
-            </a><a href="#">גויאבה
-            </a>
-        </nav>
+        <!--&lt;!&ndash; Navigation &ndash;&gt;-->
+        <!--<nav class="menubar right">-->
+            <!--<a href="index.html" class="selected">דף הבית-->
+            <!--</a><a href="#">אודות-->
+            <!--</a><a href="#">גבר על-->
+            <!--</a><a href="#">גבס-->
+            <!--</a><a href="#">גויאבה-->
+            <!--</a>-->
+        <!--</nav>-->
 
-        <!-- Help -->
-        <nav class="secondary-menu left">
-            <a>?</a>
-        </nav>
-    </header>
+        <!--&lt;!&ndash; Help &ndash;&gt;-->
+        <!--<nav class="secondary-menu left">-->
+            <!--<a>?</a>-->
+        <!--</nav>-->
+    <!--</header>-->
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <!--<a class="navbar-brand" href="#">WebSiteName</a>-->
+                <img src="images/Batman.png" class="logo-size grayscale">
+            </div>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">דף הבית</a></li>
+                    <li><a href="#">אודות</a></li>
+                    <li><a href="#">גבר על</a></li>
+                    <li><a href="#">גבס</a></li>
+                    <li><a href="#">גויאבה</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> הרשמה</a></li>
+                    <li><a data-toggle="modal" href="#loginModal"><span class="glyphicon glyphicon-log-in"></span> התחברות</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <!-- Middle of page -->
     <section class="main">
         <!-- Login Section -->
-        <section class="login" id="loginSection">
-            <section class="login-top">
-                <a class="exit-button left" id="btnLoginClose">x</a>
-                <h2>התחברות</h2>
-            </section>
+        <div id="loginModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
 
-            <form class="login-form">
-                <section class="field">
-                    <section class="subfield">
-                        <label for="username">שם משתמש:</label>
-                    </section>
-                    <section class="subfield">
-                        <input type="text" class="field" name="username" id="username" placeholder="TheBatman">
-                        <div class="error" id="username-error"></div>
-                    </section>
-                </section>
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <section class="login" id="loginSection">
+                        <section class="login-top">
+                            <a class="exit-button left" id="btnLoginClose" data-toggle="modal" data-target="#loginModal">x</a>
+                            <h2>התחברות</h2>
+                        </section>
 
-                <section class="field">
-                    <section class="subfield">
-                        <label for="password">סיסמא:</label>
-                    </section>
-                    <section class="subfield">
-                        <input type="password" class="field" name="password" id="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
-                        <div class="error" id="password-error"></div>
-                    </section>
-                </section>
+                        <form class="login-form">
+                            <section class="field">
+                                <section class="subfield">
+                                    <label for="username">שם משתמש:</label>
+                                </section>
+                                <section class="subfield">
+                                    <input type="text" class="field" name="username" id="username" placeholder="TheBatman">
+                                    <div class="error" id="username-error"></div>
+                                </section>
+                            </section>
 
-                <p class="info expand">
-                    <strong>שימו לב!</strong> העישון אסור בכל מתחמי התחנה והרציפים, למעט במקומות המיועדים לכך. <br>
-                    הרכבת של השעה - <em>שש, ועשרים ושלוש דקות</em>, נכנסת לרציף, <em>2</em>. נא להתרחק משפת הרציף אל מעבר לפס הצהוב. <br>
-                    לידעתיכם, הקרון הצפוני ברכבת, מיועד לבעלי כרטיס מקום שמור בלבד.
-                </p>
+                            <section class="field">
+                                <section class="subfield">
+                                    <label for="password">סיסמא:</label>
+                                </section>
+                                <section class="subfield">
+                                    <input type="password" class="field" name="password" id="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
+                                    <div class="error" id="password-error"></div>
+                                </section>
+                            </section>
 
-                <input type="button" class="login-button" id="login-button" value="התחבר">
-            </form>
-        </section>
+                            <p class="info expand">
+                                <strong>שימו לב!</strong> העישון אסור בכל מתחמי התחנה והרציפים, למעט במקומות המיועדים לכך. <br>
+                                הרכבת של השעה - <em>שש, ועשרים ושלוש דקות</em>, נכנסת לרציף, <em>2</em>. נא להתרחק משפת הרציף אל מעבר לפס הצהוב. <br>
+                                לידעתיכם, הקרון הצפוני ברכבת, מיועד לבעלי כרטיס מקום שמור בלבד.
+                            </p>
+
+                            <input type="button" class="login-button" id="login-button" value="התחבר">
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
     </section>
 </body>
 </html>

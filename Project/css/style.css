@@ -63,10 +63,11 @@ body, html{
 
 body {
     font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: #E0E0E0;
 }
 
 /* GENERAL */
-section, header, footer, nav {
+section, header, footer {
     display: inline-block;
 }
 .right {
@@ -102,8 +103,11 @@ header.menubar {
     height: 100%;
 }
 img.logo-size {
-    width: 78px;
-    height: 47px;
+    width: 98px;
+    height: 59px;
+    margin-left: 15px;
+    position: relative;
+    top: 3px;
 }
 img.grayscale {
     filter: grayscale(0%);
@@ -168,7 +172,6 @@ nav.secondary-menu a:hover {
 
 /* START OF MIDDLE OF PAGE */
 section.main {
-    background: #E0E0E0;
     width: 100%;
     height: 110%;
     padding-top: 38px;
@@ -308,3 +311,15 @@ input.login-button:active {
     background: linear-gradient(#CCCCCC 5%, #E0E0E0);
 }
 /* END OF MIDDLE OF PAGE */
+
+/* bootstarp */
+.navbar {
+    max-height: 50px;
+}
+
+.modal-content {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: transparent;
+    border: none;
+}
