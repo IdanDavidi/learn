@@ -45,47 +45,44 @@
     <section class="main">
         <!-- Login Section -->
         <div id="loginModal" class="modal fade" role="dialog">
-            <div class="modal-dialog">
+            <div class="modal-dialog login">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <a class="exit-button left" data-toggle="modal" data-target="#loginModal">x</a>
+                    <h2>התחברות</h2>
+                </div>
 
                 <!-- Modal content-->
                 <div class="modal-content">
-                    <section class="login" id="loginSection">
-                        <section class="login-top">
-                            <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">-->
-                            <a class="exit-button left" data-toggle="modal" data-target="#loginModal">x</a>
-                            <h2>התחברות</h2>
+                    <form class="login-form">
+                        <section class="field" id="userField">
+                            <section class="subfield" id="userTitle">
+                                <label for="username">שם משתמש:</label>
+                            </section>
+                            <section class="subfield" id="userInput">
+                                <input type="text" class="field form-control" name="username" id="username" placeholder="TheBatman">
+                                <div class="error" id="username-error"></div>
+                            </section>
                         </section>
 
-                        <form class="login-form">
-                            <section class="field">
-                                <section class="subfield">
-                                    <label for="username">שם משתמש:</label>
-                                </section>
-                                <section class="subfield">
-                                    <input type="text" class="field" name="username" id="username" placeholder="TheBatman">
-                                    <div class="error" id="username-error"></div>
-                                </section>
+                        <section class="field" id="passField">
+                            <section class="subfield" id="passTitle">
+                                <label for="password">סיסמא:</label>
                             </section>
-
-                            <section class="field">
-                                <section class="subfield">
-                                    <label for="password">סיסמא:</label>
-                                </section>
-                                <section class="subfield">
-                                    <input type="password" class="field" name="password" id="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
-                                    <div class="error" id="password-error"></div>
-                                </section>
+                            <section class="subfield" id="passInput">
+                                <input type="password" class="field form-control" name="password" id="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
+                                <div class="error" id="password-error"></div>
                             </section>
+                        </section>
 
-                            <p class="info expand">
-                                <strong>שימו לב!</strong> העישון אסור בכל מתחמי התחנה והרציפים, למעט במקומות המיועדים לכך. <br>
-                                הרכבת של השעה - <em>שש, ועשרים ושלוש דקות</em>, נכנסת לרציף, <em>2</em>. נא להתרחק משפת הרציף אל מעבר לפס הצהוב. <br>
-                                לידעתיכם, הקרון הצפוני ברכבת, מיועד לבעלי כרטיס מקום שמור בלבד.
-                            </p>
+                        <p class="info expand">
+                            <strong>שימו לב!</strong> העישון אסור בכל מתחמי התחנה והרציפים, למעט במקומות המיועדים לכך. <br>
+                            הרכבת של השעה - <em>שש, ועשרים ושלוש דקות</em>, נכנסת לרציף, <em>2</em>. נא להתרחק משפת הרציף אל מעבר לפס הצהוב. <br>
+                            לידעתיכם, הקרון הצפוני ברכבת, מיועד לבעלי כרטיס מקום שמור בלבד.
+                        </p>
 
-                            <input type="button" class="login-button" id="login-button" value="התחבר">
-                        </form>
-                    </section>
+                        <input type="button" class="login-button" id="login-button" value="התחבר">
+                    </form>
                 </div>
             </div>
         </div>

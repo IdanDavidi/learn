@@ -177,7 +177,7 @@ section.main {
     text-align: center;
 }
 
-section.login {
+.login {
     margin-top: 70px;
     border: solid #777777 3px;
     border-radius: 6px;
@@ -206,7 +206,7 @@ a.exit-button:hover {
     cursor: pointer;
     text-decoration: none;
 }
-section.login h2 {
+.login h2 {
     margin: 10px auto;
     font: 700 24px Tahoma, Arial, sans-serif;
     width: auto;
@@ -215,7 +215,7 @@ form.login-form {
     position: relative;
     direction: rtl;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 15px;
 }
 section.field {
     display: block;
@@ -243,7 +243,7 @@ div.error {
     overflow: hidden;
     width: 250px;
     text-overflow: ellipsis;
-    color: red;
+    color: #a94442;
 }
 /*div.error:last-of-type {*/
     /*padding-bottom: 0;*/
@@ -309,6 +309,8 @@ input.login-button:hover {
 }
 input.login-button:active {
     background: linear-gradient(#CCCCCC 5%, #E0E0E0);
+    box-shadow: none;
+    -webkit-box-shadow: none;
 }
 /* END OF MIDDLE OF PAGE */
 
@@ -322,4 +324,9 @@ input.login-button:active {
     box-shadow: none;
     background: transparent;
     border: none;
+}
+
+.modal-header {
+    padding: 5px;
+    border-bottom-color: #777777;
 }
