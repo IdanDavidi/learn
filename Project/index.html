@@ -15,35 +15,17 @@
 </head>
 <body onload="onLoad();">
     <!-- Menu Bar -->
-    <!--<header id="MenuBar" class="top-static menubar">-->
-        <!--&lt;!&ndash; Logo &ndash;&gt;-->
-        <!--<section class="logo right">-->
-            <!--<img src="images/Batman.png" class="logo-size grayscale">-->
-        <!--</section>-->
-
-        <!--&lt;!&ndash; Navigation &ndash;&gt;-->
-        <!--<nav class="menubar right">-->
-            <!--<a href="index.html" class="selected">דף הבית-->
-            <!--</a><a href="#">אודות-->
-            <!--</a><a href="#">גבר על-->
-            <!--</a><a href="#">גבס-->
-            <!--</a><a href="#">גויאבה-->
-            <!--</a>-->
-        <!--</nav>-->
-
-        <!--&lt;!&ndash; Help &ndash;&gt;-->
-        <!--<nav class="secondary-menu left">-->
-            <!--<a>?</a>-->
-        <!--</nav>-->
-    <!--</header>-->
-
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <!--<a class="navbar-brand" href="#">WebSiteName</a>-->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
                 <img src="images/Batman.png" class="logo-size grayscale">
             </div>
-            <div>
+            <div class="collapse navbar-collapse" id="mainNavbar">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#">דף הבית</a></li>
                     <li><a href="#">אודות</a></li>
@@ -69,7 +51,8 @@
                 <div class="modal-content">
                     <section class="login" id="loginSection">
                         <section class="login-top">
-                            <a class="exit-button left" id="btnLoginClose" data-toggle="modal" data-target="#loginModal">x</a>
+                            <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">-->
+                            <a class="exit-button left" data-toggle="modal" data-target="#loginModal">x</a>
                             <h2>התחברות</h2>
                         </section>
 

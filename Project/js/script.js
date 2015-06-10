@@ -6,12 +6,6 @@
 function onLoad() {
     var object;
 
-    // OnClick event listener to hide the login section
-    object = document.getElementById('btnLoginClose');
-    object.addEventListener('click', function () {
-        hideElement('loginSection');
-    });
-
     // OnClick event to login button
     object = document.getElementById('login-button');
     object.addEventListener('click', function() {
