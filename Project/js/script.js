@@ -27,7 +27,7 @@ function sendForm() {
         username_error.show(250);
         boolContinue = false;
     }
-    else if (userNameReg.test(userName.value)) {
+    else if (userNameReg.test(userName.val())) {
         username_error.html('שם משתמש מכיל תווים אסורים');
         username_error.show(250);
         boolContinue = false;
