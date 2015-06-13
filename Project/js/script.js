@@ -7,6 +7,7 @@ function onLoad() {
 
     // OnClick event to login button
     $('#login-button').click(sendForm);
+    $('.glyphicon-chevron-toggle').click(chevronToggle);
 }
 
 function sendForm() {
@@ -72,4 +73,11 @@ function sendForm() {
             $loginSection.html('התחברת בהצלחה!');
         }).html('');
     }
+}
+
+function chevronToggle() {
+    $('.glyphicon-chevron-toggle').removeClass('chevron-selected');
+    $(this).addClass('chevron-selected');
+    $(this).toggleClass('glyphicon-chevron-up');
+    $(this).toggleClass('glyphicon-chevron-down');
 }

@@ -281,9 +281,15 @@ input.login-button:active {
     border-bottom-color: #777777;
 }
 
+.row {
+    margin-right: 15px; /* the original value is -15px which is cause issues */
+    margin-left: 15px;
+}
+
 .table {
     direction: rtl;
     text-align: right;
+    margin-bottom: 10px;
 }
 
 .table > thead > tr > th {
@@ -295,4 +301,48 @@ input.login-button:active {
 
 table, table td, thead th {
     border: 1px solid black;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+    color: black;
+    background-color: #fff;
+    border: 1px solid black;
+}
+
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+    color: black;
+    background-color: #E0E0E0;
+    border-color: black;
+}
+
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+    color: #fff;
+    background-color: black;
+    border-color: black;
+    font-weight: 700;
+}
+
+.glyphicon-space {
+    padding-left: 7px;
+    color: gray;
+}
+
+.chevron-selected {
+    color: white;
+}
+
+@media only screen and (max-width: 766px) {
+    .collapsing, .in {background-color: #f7f7f7;}
+    .collapsing ul li a:hover, .in ul li a:hover {color: black !important;}
+    .collapsing ul li a:focus, .in ul li a:focus {color: black !important;}
+    .collapsing ul li.active a:hover, .in ul li.active a:hover {color: white !important;}
 }

@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/rest.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-rtl.css">
     <link rel="stylesheet" href="css/style.css" />
@@ -46,14 +45,14 @@
     <section class="main">
         <div class="row">
             <div class="col-sm-1"></div>
-            <div class="col-sm-10">
-                <table class="table">
+            <div class="col-xs-10">
+                <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th>שם פרטי</th>
-                            <th>שם משפחה</th>
-                            <th>מספר אישי</th>
-                            <th>יחידה</th>
+                            <th><span class="glyphicon glyphicon-chevron-up glyphicon-space glyphicon-chevron-toggle"></span>שם פרטי</th>
+                            <th><span class="glyphicon glyphicon-chevron-up glyphicon-space glyphicon-chevron-toggle"></span>שם משפחה</th>
+                            <th><span class="glyphicon glyphicon-chevron-up glyphicon-space glyphicon-chevron-toggle"></span>מספר אישי</th>
+                            <th><span class="glyphicon glyphicon-chevron-up glyphicon-space glyphicon-chevron-toggle"></span>יחידה</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -77,6 +76,15 @@
                         </tr>
                     </tbody>
                 </table>
+
+                <!-- Pagination -->
+                <ul class="pagination pagination-sm">
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                </ul>
             </div>
             <div class="col-sm-1"></div>
         </div>
